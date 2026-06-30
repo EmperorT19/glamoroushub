@@ -8,8 +8,8 @@ import { CommonModule } from '@angular/common';
   template: `
     <div class="loader-overlay" [class.hidden]="isHidden">
       <div class="loader-content" [class.fade-out]="isRevealing">
-        <div class="logo-box">
-          <img src="https://placehold.co/400x400/000000/D4AF37?text=LOGO" alt="Logo" class="w-16 h-16 object-contain animate-pulse">
+        <div class="logo-box border-none bg-transparent">
+          <img src="glam-logo-1.jpg" alt="Logo" class="w-24 h-24 md:w-32 md:h-32 object-contain animate-pulse">
         </div>
         <div class="loading-bar-container mt-8">
           <div class="loading-bar"></div>

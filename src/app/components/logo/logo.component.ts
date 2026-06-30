@@ -7,8 +7,8 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   template: `
     <a routerLink="/" class="flex items-center gap-3 group">
-      <div class="h-10 w-10 border border-gold flex items-center justify-center bg-black group-hover:bg-gold/10 transition-colors duration-300">
-        <img src="https://placehold.co/400x400/000000/D4AF37?text=LOGO" alt="GMLH Logo" class="h-8 w-8 object-contain">
+      <div class="flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+        <img src="glam-logo-1.jpg" alt="GMLH Logo" class="h-16 w-auto object-contain">
       </div>
       <span class="font-bold text-lg tracking-wider uppercase text-white group-hover:text-gold transition-colors duration-300 hidden sm:block">
         Glamorous Milliards
