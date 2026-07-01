@@ -1,6 +1,6 @@
-# Glamorous Milliards Lifestyle Hub
+# Glamorous Hub
 
-This is the front-end Angular 18 application for the Glamorous Milliards Lifestyle Hub. It is built using Standalone Components, Angular Signals, and Tailwind CSS.
+This is the front-end Angular 18 application for the Glamorous Hub. It is built using Standalone Components, Angular Signals, and Tailwind CSS.
 
 ## Development server
 
