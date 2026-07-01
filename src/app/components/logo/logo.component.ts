@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
         <img src="glam-logo-1.jpg" alt="GMLH Logo" class="h-16 w-auto object-contain">
       </div>
       <span class="font-bold text-lg tracking-wider uppercase text-white group-hover:text-gold transition-colors duration-300 hidden sm:block">
-        Glamorous Milliards
+        Glamorous Hub
       </span>
     </a>
   `,

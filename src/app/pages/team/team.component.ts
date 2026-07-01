@@ -38,7 +38,7 @@ export class TeamComponent implements OnInit {
   ngOnInit() {
     this.seo.updateTags({
       title: 'The Team',
-      description: 'Meet the expert barbers and grooming specialists at Glamorous Milliards Lifestyle Hub.'
+      description: 'Meet the expert barbers and grooming specialists at Glamorous Hub.'
     });
   }
 }

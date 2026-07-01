@@ -49,7 +49,7 @@ import { SeoService } from '../../services/seo.service';
                       class="w-full bg-black border border-gray-800 text-white px-4 py-3 focus:outline-none focus:border-gold transition-colors appearance-none"
                       [class.border-red-500]="serviceCtrl.invalid && (serviceCtrl.dirty || serviceCtrl.touched)">
                 <option value="" disabled selected>Select a service</option>
-                <option *ngFor="let s of mockData.services()" [value]="s.id">{{ s.name }} - KES {{ s.priceKes }}</option>
+                <option *ngFor="let s of mockData.services()" [value]="s.id">{{ s.name }}</option>
               </select>
             </div>
 
@@ -123,7 +123,7 @@ export class BookingComponent implements OnInit {
   ngOnInit() {
     this.seo.updateTags({
       title: 'Book Appointment',
-      description: 'Schedule your next grooming session at Glamorous Milliards Lifestyle Hub.'
+      description: 'Schedule your next grooming session at Glamorous Hub.'
     });
 
     this.route.queryParams.subscribe(params => {

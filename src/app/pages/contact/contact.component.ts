@@ -30,7 +30,7 @@ import { SeoService } from '../../services/seo.service';
               <ul class="space-y-6 text-gray-300 text-lg">
                 <li class="flex items-start">
                   <span class="text-gold mt-1 mr-4">📍</span>
-                  <span>Nairobi, Kenya<br>Glamorous Hub Premium Location</span>
+                  <span>Bravion House, Kindaruma Road,<br>Opposite Carrefour Supermarket,<br>Rose Avenue Mall, Next to Listers Car Wash</span>
                 </li>
                 <li class="flex items-center">
                   <span class="text-gold mr-4">📞</span>
@@ -38,7 +38,7 @@ import { SeoService } from '../../services/seo.service';
                 </li>
                 <li class="flex items-center">
                   <span class="text-gold mr-4">✉️</span>
-                  <span>hello&#64;glamorousmilliards.com</span>
+                  <span>hello&#64;glamoroushub.com</span>
                 </li>
               </ul>
             </div>
@@ -126,7 +126,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.seo.updateTags({
       title: 'Contact',
-      description: 'Get in touch with Glamorous Milliards Lifestyle Hub in Nairobi.'
+      description: 'Get in touch with Glamorous Hub in Nairobi.'
     });
   }
 

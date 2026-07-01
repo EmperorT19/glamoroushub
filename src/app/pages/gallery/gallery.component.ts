@@ -74,7 +74,7 @@ export class GalleryComponent implements OnInit {
   ngOnInit() {
     this.seo.updateTags({
       title: 'Gallery & Reels',
-      description: 'View the premium cuts, styles, and luxury atmosphere at Glamorous Milliards Lifestyle Hub.'
+      description: 'View the premium cuts, styles, and luxury atmosphere at Glamorous Hub.'
     });
   }
 }

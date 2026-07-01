@@ -38,7 +38,7 @@ import { LogoComponent } from '../logo/logo.component';
             <ul class="space-y-3 text-sm text-gray-400">
               <li class="flex items-start">
                 <span class="text-gold mr-2">📍</span>
-                <span>Nairobi, Kenya<br>Glamorous Hub Location</span>
+                <span>Bravion House, Kindaruma Road,<br>Opposite Carrefour Supermarket,<br>Rose Avenue Mall, Next to Listers Car Wash</span>
               </li>
               <li class="flex items-center">
                 <span class="text-gold mr-2">📞</span>
@@ -46,7 +46,7 @@ import { LogoComponent } from '../logo/logo.component';
               </li>
               <li class="flex items-center">
                 <span class="text-gold mr-2">✉️</span>
-                <span>bookings&#64;glamorousmilliards.com</span>
+                <span>bookings&#64;glamoroushub.com</span>
               </li>
             </ul>
           </div>
@@ -56,10 +56,10 @@ import { LogoComponent } from '../logo/logo.component';
               <span class="w-8 h-[2px] bg-gold mr-3"></span> Socials
             </h3>
             <div class="flex space-x-4">
-              <a href="https://instagram.com/glamorousmilliards" target="_blank" class="w-10 h-10 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-black hover:bg-gold hover:border-gold transition-all duration-300">
+              <a href="https://instagram.com/glamoroushub" target="_blank" class="w-10 h-10 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-black hover:bg-gold hover:border-gold transition-all duration-300">
                 IG
               </a>
-              <a href="https://tiktok.com/@glamorousmilliards" target="_blank" class="w-10 h-10 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-black hover:bg-gold hover:border-gold transition-all duration-300">
+              <a href="https://tiktok.com/@glamoroushub" target="_blank" class="w-10 h-10 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-black hover:bg-gold hover:border-gold transition-all duration-300">
                 TK
               </a>
             </div>
@@ -69,7 +69,7 @@ import { LogoComponent } from '../logo/logo.component';
         
         <div class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p class="text-gray-600 text-xs uppercase tracking-widest mb-4 md:mb-0">
-            &copy; {{ currentYear }} Glamorous Milliards Lifestyle Hub. All rights reserved.
+            &copy; {{ currentYear }} Glamorous Hub. All rights reserved.
           </p>
           <div class="flex space-x-6 text-xs text-gray-600 uppercase tracking-widest">
             <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>

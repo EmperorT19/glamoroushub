@@ -9,19 +9,23 @@ import { RouterLink } from '@angular/router';
   imports: [CommonModule, RouterLink],
   template: `
     <div class="group border border-gray-900 bg-black-light p-6 hover:border-gold transition-colors duration-500 flex flex-col h-full relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gold/5 group-hover:bg-gold/10 transition-colors duration-500 rounded-bl-[100%] pointer-events-none"></div>
+      <!-- Image Container -->
+      <div class="relative overflow-hidden aspect-[16/10] mb-6 border border-gray-800/60 group-hover:border-gold/30 transition-colors duration-500">
+        <img [src]="service.imageUrl" [alt]="service.name" 
+             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
+      </div>
       
-      <div class="flex justify-between items-start mb-4 relative z-10">
+      <!-- Category Badge -->
+      <span class="text-gold text-xs uppercase tracking-widest font-semibold mb-2 block">{{ service.category }}</span>
+      
+      <div class="flex justify-between items-start mb-3 relative z-10">
         <h3 class="text-xl text-white font-bold group-hover:text-gold transition-colors duration-300">
           {{ service.name }}
         </h3>
-        <div class="text-right flex-shrink-0 ml-4">
-          <div class="text-gold font-bold text-lg">KES {{ service.priceKes | number }}</div>
-          <div class="text-gray-500 text-sm">(\${{ service.priceUsd }})</div>
-        </div>
       </div>
       
-      <p *ngIf="service.description" class="text-gray-400 text-sm mb-6 flex-grow relative z-10">
+      <p *ngIf="service.description" class="text-gray-400 text-sm mb-6 flex-grow relative z-10 leading-relaxed">
         {{ service.description }}
       </p>
       

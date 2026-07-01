@@ -25,7 +25,7 @@ import { StaggerTextDirective } from '../../directives/stagger-text.directive';
           Redefining The Standard
         </h1>
         <p appScrollReveal class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-          Experience premium grooming at Glamorous Milliards Lifestyle Hub. Sharp cuts, precise detailing, and an unmatched atmosphere designed for the modern gentleman.
+          Experience premium grooming at Glamorous Hub. Sharp cuts, precise detailing, and an unmatched atmosphere designed for the modern gentleman.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a routerLink="/booking" class="bg-gold text-black px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors duration-300 w-full sm:w-auto text-center shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] border border-gold hover:border-white">
@@ -120,7 +120,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.seo.updateTags({
       title: 'Home',
-      description: 'Experience premium grooming at Glamorous Milliards Lifestyle Hub. Sharp cuts, precise detailing, and an unmatched atmosphere.'
+      description: 'Experience premium grooming at Glamorous Hub. Sharp cuts, precise detailing, and an unmatched atmosphere.'
     });
   }
 }
