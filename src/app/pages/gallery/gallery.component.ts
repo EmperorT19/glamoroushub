@@ -27,8 +27,6 @@ import { ReelCardComponent } from '../../components/reel-card/reel-card.componen
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <app-reel-card *ngFor="let reel of mockData.reels()" [reel]="reel"></app-reel-card>
-            <!-- Add more dummy reels for grid fill -->
-            <app-reel-card *ngFor="let reel of mockData.reels()" [reel]="reel"></app-reel-card>
           </div>
         </div>
 
@@ -39,24 +37,13 @@ import { ReelCardComponent } from '../../components/reel-card/reel-card.componen
           </h2>
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <!-- Mock gallery images -->
-            <div class="aspect-square bg-gray-900 border border-gray-800 hover:border-gold transition-colors duration-300 relative group overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=600&auto=format&fit=crop" alt="Gallery 1" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
-            </div>
-            <div class="aspect-square bg-gray-900 border border-gray-800 hover:border-gold transition-colors duration-300 relative group overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop" alt="Gallery 2" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
-            </div>
-            <div class="aspect-square bg-gray-900 border border-gray-800 hover:border-gold transition-colors duration-300 relative group overflow-hidden lg:col-span-2">
-              <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?q=80&w=600&auto=format&fit=crop" alt="Gallery 3" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
-            </div>
-            <div class="aspect-square bg-gray-900 border border-gray-800 hover:border-gold transition-colors duration-300 relative group overflow-hidden lg:row-span-2 lg:h-full">
-              <img src="https://images.unsplash.com/photo-1512496015851-a1cbf59c363d?q=80&w=600&auto=format&fit=crop" alt="Gallery 4" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
-            </div>
-            <div class="aspect-square bg-gray-900 border border-gray-800 hover:border-gold transition-colors duration-300 relative group overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1520627581292-1279262cf1b5?q=80&w=600&auto=format&fit=crop" alt="Gallery 5" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
-            </div>
-            <div class="aspect-square bg-gray-900 border border-gray-800 hover:border-gold transition-colors duration-300 relative group overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1593702288056-cc1ec5712e1f?q=80&w=600&auto=format&fit=crop" alt="Gallery 6" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
-            </div>
+            <a *ngFor="let item of mockData.gallery()" 
+               [href]="item.fullImage" 
+               target="_blank" 
+               class="aspect-square bg-gray-900 border border-gray-800 hover:border-gold transition-colors duration-300 relative group overflow-hidden block"
+               [ngClass]="item.gridClasses || ''">
+              <img [src]="item.thumbnail" [alt]="item.alt" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
+            </a>
           </div>
         </div>
         

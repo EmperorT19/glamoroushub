@@ -20,7 +20,7 @@ import { TeamCardComponent } from '../../components/team-card/team-card.componen
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto animate-slide-up">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto animate-slide-up">
           <app-team-card *ngFor="let member of mockData.team()" [member]="member"></app-team-card>
         </div>
         

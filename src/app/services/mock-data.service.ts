@@ -30,7 +30,18 @@ export interface Reel {
   thumbnail: string;
   videoUrl: string;
   title: string;
+  instagramUrl?: string;
+  views?: string;
 }
+
+export interface GalleryItem {
+  id: string;
+  thumbnail: string;
+  fullImage: string;
+  alt: string;
+  gridClasses?: string;
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -126,28 +137,37 @@ export class MockDataService {
   private teamSignal = signal<TeamMember[]>([
     {
       id: 'barber1',
-      name: 'James Mwangi',
+      name: 'Obba',
       role: 'Master Barber',
-      experience: '8+ Years',
-      photoUrl: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=600&auto=format&fit=crop',
+      experience: '23+ Years',
+      photoUrl: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1783504188/IMG_20260704_095032_056.jpg_ka67ec.jpg',
       instagram: 'https://instagram.com/glamoroushub',
       tiktok: 'https://tiktok.com/@glamoroushub'
     },
     {
       id: 'barber2',
-      name: 'Kevin Ochieng',
+      name: 'Steve',
       role: 'Fade Specialist',
       experience: '5+ Years',
-      photoUrl: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=600&auto=format&fit=crop',
+      photoUrl: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1783504187/IMG_20260701_144805_955.JPG_yn2drv.jpg',
       instagram: 'https://instagram.com/glamoroushub',
       tiktok: 'https://tiktok.com/@glamoroushub'
     },
     {
       id: 'specialist1',
-      name: 'Sarah Wanjiku',
+      name: 'Mariam',
       role: 'Wash & Grooming Specialist',
       experience: '6+ Years',
-      photoUrl: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop',
+      photoUrl: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1783504189/IMG_20260706_145312_705.jpg_g4psvn.jpg',
+      instagram: 'https://instagram.com/glamoroushub',
+      tiktok: 'https://tiktok.com/@glamoroushub'
+    },
+    {
+      id: 'barber3',
+      name: 'Moha',
+      role: 'Senior Stylist & Groomer',
+      experience: '7+ Years',
+      photoUrl: 'https://images.unsplash.com/photo-1605497746444-ac9dbd340b66?q=80&w=600&auto=format&fit=crop',
       instagram: 'https://instagram.com/glamoroushub',
       tiktok: 'https://tiktok.com/@glamoroushub'
     }
@@ -165,13 +185,106 @@ export class MockDataService {
   readonly testimonials = this.testimonialsSignal.asReadonly();
 
   // --- Reels Data ---
+  // To change the Reels, update the array below:
+  // - 'thumbnail': The cover/poster image displayed before hover/play.
+  // - 'videoUrl': The direct link to the MP4 video file that plays on hover.
+  // - 'instagramUrl': The Instagram post link opened when clicking "View on Instagram".
+  // - 'views': The overlay text showing the views count.
   private reelsSignal = signal<Reel[]>([
-    { id: 'r1', thumbnail: 'https://images.unsplash.com/photo-1605497787864-46700c25d81b?q=80&w=400&auto=format&fit=crop', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', title: 'The Executive Fade' },
-    { id: 'r2', thumbnail: 'https://images.unsplash.com/photo-1595089332560-f5a6f2b7f7ce?q=80&w=400&auto=format&fit=crop', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', title: 'Beard Sculpting Masterclass' },
-    { id: 'r3', thumbnail: 'https://images.unsplash.com/photo-1622288432450-277d0f658c11?q=80&w=400&auto=format&fit=crop', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', title: 'Premium Wash & Care' }
+    {
+      id: 'r1',
+      thumbnail: 'assets/reels/reel-1.jpg',
+      videoUrl: 'https://www.instagram.com/p/Daca8c4tMpA/',
+      title: 'Master Barber Precision Shaping',
+      instagramUrl: 'https://www.instagram.com/p/Daca8c4tMpA/',
+    },
+    {
+      id: 'r2',
+      thumbnail: 'assets/reels/reel-2.jpg',
+      videoUrl: 'https://inspireddesignshairsalonandbarber.com/wp-content/uploads/2023/07/Have-you-seen-our-new-video-featuring-Our-Original-Barbershop.mp4',
+      title: 'Precision Hair Cut & Fade Styling',
+      instagramUrl: 'https://www.instagram.com/glamorouslifestylehub/reel/DaUx9t2Ay0E/',
+      views: '53'
+    },
+    {
+      id: 'r3',
+      thumbnail: 'glam-logo-1.jpg',
+      videoUrl: 'https://goodmansbarberlounge.com/wp-content/uploads/2021/07/haircut.mp4',
+      title: 'Glamorous Hub Barbershop Official Logo Reveal',
+      instagramUrl: 'https://www.instagram.com/glamorouslifestylehub/reel/DaPQc7at5dG/',
+      views: '240'
+    },
+    {
+      id: 'r4',
+      thumbnail: 'assets/reels/reel-4.jpg',
+      videoUrl: 'https://inspireddesignshairsalonandbarber.com/wp-content/uploads/2023/07/Have-you-seen-our-new-video-featuring-Our-Original-Barbershop.mp4',
+      title: 'Classic Low Fade & Beard Styling Session',
+      instagramUrl: 'https://www.instagram.com/glamorouslifestylehub/reel/DaK-fgNNWZK/',
+      views: '828'
+    },
+    {
+      id: 'r5',
+      thumbnail: 'assets/reels/reel-5.jpg',
+      videoUrl: 'https://goodmansbarberlounge.com/wp-content/uploads/2021/07/haircut.mp4',
+      title: 'POV: It\'s five minutes to closing time! 🤣🤣',
+      instagramUrl: 'https://www.instagram.com/glamorouslifestylehub/reel/DZuAsyAtd6p/',
+      views: '2.1K'
+    },
+    {
+      id: 'r6',
+      thumbnail: 'assets/reels/reel-6.jpg',
+      videoUrl: 'https://inspireddesignshairsalonandbarber.com/wp-content/uploads/2023/07/Have-you-seen-our-new-video-featuring-Our-Original-Barbershop.mp4',
+      title: 'Premium Styling & Luxury Haircut Service',
+      instagramUrl: 'https://www.instagram.com/glamorouslifestylehub/reel/DZrLM0wN44C/',
+      views: '159'
+    }
   ]);
 
   readonly reels = this.reelsSignal.asReadonly();
+
+  // --- Gallery Data ---
+  private gallerySignal = signal<GalleryItem[]>([
+    {
+      id: 'g1',
+      thumbnail: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=600&auto=format&fit=crop',
+      fullImage: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1200&auto=format&fit=crop',
+      alt: 'Gallery 1'
+    },
+    {
+      id: 'g2',
+      thumbnail: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop',
+      fullImage: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1200&auto=format&fit=crop',
+      alt: 'Gallery 2'
+    },
+    {
+      id: 'g3',
+      thumbnail: 'https://images.unsplash.com/photo-1621607512214-68297480165e?q=80&w=600&auto=format&fit=crop',
+      fullImage: 'https://images.unsplash.com/photo-1621607512214-68297480165e?q=80&w=1200&auto=format&fit=crop',
+      alt: 'Gallery 3',
+      gridClasses: 'lg:col-span-2'
+    },
+    {
+      id: 'g4',
+      thumbnail: 'https://images.unsplash.com/photo-1512496015851-a1cbf59c363d?q=80&w=600&auto=format&fit=crop',
+      fullImage: 'https://images.unsplash.com/photo-1512496015851-a1cbf59c363d?q=80&w=1200&auto=format&fit=crop',
+      alt: 'Gallery 4',
+      gridClasses: 'lg:row-span-2 lg:h-full'
+    },
+    {
+      id: 'g5',
+      thumbnail: 'https://images.unsplash.com/photo-1520627581292-1279262cf1b5?q=80&w=600&auto=format&fit=crop',
+      fullImage: 'https://images.unsplash.com/photo-1520627581292-1279262cf1b5?q=80&w=1200&auto=format&fit=crop',
+      alt: 'Gallery 5'
+    },
+    {
+      id: 'g6',
+      thumbnail: 'https://images.unsplash.com/photo-1593702288056-cc1ec5712e1f?q=80&w=600&auto=format&fit=crop',
+      fullImage: 'https://images.unsplash.com/photo-1593702288056-cc1ec5712e1f?q=80&w=1200&auto=format&fit=crop',
+      alt: 'Gallery 6'
+    }
+  ]);
+
+  readonly gallery = this.gallerySignal.asReadonly();
 
   constructor() {}
 }

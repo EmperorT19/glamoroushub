@@ -73,8 +73,8 @@ import { StaggerTextDirective } from '../../directives/stagger-text.directive';
           <h2 class="text-4xl font-bold text-white uppercase tracking-tight">The Team</h2>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div appScrollReveal *ngFor="let member of mockData.team(); let i = index" [style.transition-delay]="(i * 0.2) + 's'">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div appScrollReveal *ngFor="let member of mockData.team(); let i = index" [style.transition-delay]="(i * 0.1) + 's'">
             <app-team-card [member]="member"></app-team-card>
           </div>
         </div>
