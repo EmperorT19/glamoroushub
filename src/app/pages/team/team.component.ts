@@ -13,7 +13,7 @@ import { TeamCardComponent } from '../../components/team-card/team-card.componen
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center mb-20 animate-fade-in">
-          <h1 class="text-5xl font-bold text-white uppercase tracking-tight mb-4">The Masters</h1>
+          <h1 class="text-4xl md:text-5xl font-bold text-white uppercase tracking-tight mb-4">The Masters</h1>
           <div class="w-24 h-1 bg-gold mx-auto mb-8"></div>
           <p class="text-gray-400 max-w-2xl mx-auto text-lg">
             Meet the expert craftsmen and specialists dedicated to elevating your style.

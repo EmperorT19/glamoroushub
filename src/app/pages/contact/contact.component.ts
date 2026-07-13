@@ -12,7 +12,7 @@ import { SeoService } from '../../services/seo.service';
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="text-center mb-20 animate-fade-in">
-          <h1 class="text-5xl font-bold text-white uppercase tracking-tight mb-4">Contact Us</h1>
+          <h1 class="text-4xl md:text-5xl font-bold text-white uppercase tracking-tight mb-4">Contact Us</h1>
           <div class="w-24 h-1 bg-gold mx-auto mb-8"></div>
           <p class="text-gray-400 max-w-2xl mx-auto text-lg">
             Get in touch for inquiries, exclusive bookings, or corporate partnerships.
@@ -73,7 +73,7 @@ import { SeoService } from '../../services/seo.service';
           </div>
 
           <!-- Contact Form -->
-          <div class="bg-black-light border border-gray-900 p-8 md:p-12">
+          <div class="bg-black-light border border-gray-900 p-6 md:p-12">
             <h2 class="text-2xl font-bold text-white uppercase tracking-wider mb-8">Send a Message</h2>
             
             <form #contactForm="ngForm" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" (ngSubmit)="onSubmit(contactForm)" class="space-y-6">

@@ -20,7 +20,7 @@ import { SeoService } from '../../services/seo.service';
           <div class="w-16 h-1 bg-gold mx-auto"></div>
         </div>
 
-        <div class="bg-black-light border border-gray-900 p-8 md:p-12 animate-slide-up shadow-2xl">
+        <div class="bg-black-light border border-gray-900 p-6 md:p-12 animate-slide-up shadow-2xl">
           <!-- Update the ACTION attribute below with your Formspree/EmailJS endpoint -->
           <form #bookingForm="ngForm" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" (ngSubmit)="onSubmit(bookingForm)" class="space-y-6">
             
@@ -45,12 +45,19 @@ import { SeoService } from '../../services/seo.service';
             <!-- Service Selection -->
             <div>
               <label for="service" class="block text-gray-400 text-sm font-bold uppercase tracking-wider mb-2">Service</label>
-              <select id="service" name="service" required [(ngModel)]="selectedService" #serviceCtrl="ngModel"
-                      class="w-full bg-black border border-gray-800 text-white px-4 py-3 focus:outline-none focus:border-gold transition-colors appearance-none"
-                      [class.border-red-500]="serviceCtrl.invalid && (serviceCtrl.dirty || serviceCtrl.touched)">
-                <option value="" disabled selected>Select a service</option>
-                <option *ngFor="let s of mockData.services()" [value]="s.id">{{ s.name }}</option>
-              </select>
+              <div class="relative">
+                <select id="service" name="service" required [(ngModel)]="selectedService" #serviceCtrl="ngModel"
+                        class="w-full bg-black border border-gray-800 text-white px-4 py-3 pr-10 focus:outline-none focus:border-gold transition-colors appearance-none"
+                        [class.border-red-500]="serviceCtrl.invalid && (serviceCtrl.dirty || serviceCtrl.touched)">
+                  <option value="" disabled selected>Select a service</option>
+                  <option *ngFor="let s of mockData.services()" [value]="s.id">{{ s.name }}</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gold">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                  </svg>
+                </div>
+              </div>
             </div>
 
             <!-- Address/Location (Only shown for Mobile services) -->
@@ -68,11 +75,18 @@ import { SeoService } from '../../services/seo.service';
             <!-- Staff Selection -->
             <div>
               <label for="staff" class="block text-gray-400 text-sm font-bold uppercase tracking-wider mb-2">Preferred Specialist</label>
-              <select id="staff" name="staff" [(ngModel)]="selectedStaff"
-                      class="w-full bg-black border border-gray-800 text-white px-4 py-3 focus:outline-none focus:border-gold transition-colors appearance-none">
-                <option value="any" selected>Anyone Available</option>
-                <option *ngFor="let m of mockData.team()" [value]="m.name">{{ m.name }} - {{ m.role }}</option>
-              </select>
+              <div class="relative">
+                <select id="staff" name="staff" [(ngModel)]="selectedStaff"
+                        class="w-full bg-black border border-gray-800 text-white px-4 py-3 pr-10 focus:outline-none focus:border-gold transition-colors appearance-none">
+                  <option value="any" selected>Anyone Available</option>
+                  <option *ngFor="let m of mockData.team()" [value]="m.name">{{ m.name }} - {{ m.role }}</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gold">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                  </svg>
+                </div>
+              </div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

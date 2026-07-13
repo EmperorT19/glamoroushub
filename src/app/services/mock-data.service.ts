@@ -275,35 +275,41 @@ export class MockDataService {
   private gallerySignal = signal<GalleryItem[]>([
     {
       id: 'g1',
-      thumbnail: 'https://www.instagram.com/p/DaQAVhItOhH/',
+      thumbnail: 'assets/gallery/gal1-placeholder.jpg',
       fullImage: 'https://www.instagram.com/p/DaQAVhItOhH/',
       alt: 'Gallery 1'
     },
     {
       id: 'g2',
-      thumbnail: 'https://www.instagram.com/p/DaNODl6NBq2/',
+      thumbnail: 'assets/gallery/gal2-placeholder.jpg',
       fullImage: 'https://www.instagram.com/p/DaNODl6NBq2/',
       alt: 'Gallery 2'
     },
     {
       id: 'g3',
-      thumbnail: 'https://www.instagram.com/p/DZy_3H2jT9v/?img_index=1',
+      thumbnail: 'assets/gallery/gal3-placeholder.jpg',
       fullImage: 'https://www.instagram.com/p/DZy_3H2jT9v/?img_index=1',
       alt: 'Gallery 3',
       gridClasses: 'lg:col-span-2'
     },
     {
       id: 'g4',
-      thumbnail: 'https://www.instagram.com/p/DZ4QiBet8rg/',
+      thumbnail: 'assets/gallery/gal4-placeholder.jpg',
       fullImage: 'https://www.instagram.com/p/DZ4QiBet8rg/',
       alt: 'Gallery 4',
       gridClasses: 'lg:row-span-2 lg:h-full'
     },
     {
       id: 'g5',
-      thumbnail: 'https://www.instagram.com/p/DaKJLQwDUbx/?img_index=1',
+      thumbnail: 'assets/gallery/gal5-placeholder.jpg',
       fullImage: 'https://www.instagram.com/p/DaKJLQwDUbx/?img_index=1',
       alt: 'Gallery 5'
+    },
+    {
+      id: 'g6',
+      thumbnail: 'assets/gallery/gal6-placeholder.jpg',
+      fullImage: 'https://www.instagram.com/glamorouslifestylehub/',
+      alt: 'Gallery 6'
     }
   ]);
 

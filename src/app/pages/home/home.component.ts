@@ -21,7 +21,7 @@ import { StaggerTextDirective } from '../../directives/stagger-text.directive';
       
       <!-- Content -->
       <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <h1 [appStaggerText]="0.1" class="text-5xl md:text-7xl font-bold text-white uppercase tracking-tighter mb-6 leading-tight">
+        <h1 [appStaggerText]="0.1" class="text-4xl sm:text-5xl md:text-7xl font-bold text-white uppercase tracking-tighter mb-6 leading-tight">
           Redefining The Standard
         </h1>
         <p appScrollReveal class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
@@ -74,7 +74,7 @@ import { StaggerTextDirective } from '../../directives/stagger-text.directive';
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div appScrollReveal class="space-y-6">
           <p class="text-gold uppercase tracking-widest font-bold text-sm">Glamorous Hub House Calls</p>
-          <h2 class="text-4xl md:text-5xl font-bold text-white uppercase tracking-tight leading-tight">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white uppercase tracking-tight leading-tight">
             The Luxury Barbershop,<br>
             <span class="text-gold">At Your Doorstep.</span>
           </h2>

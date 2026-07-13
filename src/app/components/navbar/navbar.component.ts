@@ -46,8 +46,8 @@ import { LogoComponent } from '../logo/logo.component';
       </div>
 
       <!-- Mobile Menu -->
-      <div *ngIf="isMenuOpen()" class="md:hidden bg-black border-b border-gold/20 absolute w-full animate-fade-in">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <div *ngIf="isMenuOpen()" class="md:hidden bg-black/98 border-b border-gold/20 fixed top-20 left-0 w-full h-[calc(100vh-5rem)] overflow-y-auto z-40 animate-fade-in">
+        <div class="px-2 pt-2 pb-8 space-y-1 sm:px-3">
           @for (link of navLinks; track link.path) {
             <a [routerLink]="link.path" 
                routerLinkActive="text-gold bg-black-light"
@@ -82,9 +82,21 @@ export class NavbarComponent {
 
   toggleMenu() {
     this.isMenuOpen.update(v => !v);
+    this.updateBodyScroll();
   }
 
   closeMenu() {
     this.isMenuOpen.set(false);
+    this.updateBodyScroll();
+  }
+
+  private updateBodyScroll() {
+    if (typeof document !== 'undefined') {
+      if (this.isMenuOpen()) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
   }
 }
