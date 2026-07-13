@@ -53,78 +53,106 @@ export class MockDataService {
       id: '1', 
       name: 'Executive Haircut', 
       category: 'Hair', 
-      imageUrl: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop', 
+      imageUrl: 'https://images.unsplash.com/photo-1596362601603-b74f6ef166e4?fm=jpg&q=80&w=600&auto=format&fit=crop', 
       description: 'Premium cut with hot towel finish' 
     },
     { 
       id: '2', 
       name: 'Beard Trim & Shape', 
       category: 'Grooming', 
-      imageUrl: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=600&auto=format&fit=crop', 
+      imageUrl: 'https://images.unsplash.com/photo-1632072907857-d2cae8f52888?fm=jpg&q=80&w=600&auto=format&fit=crop', 
       description: 'Precision beard sculpting' 
     },
     { 
       id: '3', 
       name: 'Hair Color/Dye', 
       category: 'Hair', 
-      imageUrl: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop', 
+      imageUrl: 'https://images.unsplash.com/photo-1584906755531-f83be6b88d6b?fm=jpg&q=80&w=600&auto=format&fit=crop', 
       description: 'Professional coloring services' 
     },
     { 
       id: '4', 
       name: 'Facial Scrub & Wash', 
       category: 'Grooming', 
-      imageUrl: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=600&auto=format&fit=crop', 
+      imageUrl: 'https://www.byrdie.com/thmb/hVybIRXXPqRCSkuzx1K3XcOyC5Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/byr-primary-facial-cleansing-brushes-tstaples-303-be2ed7a551f04e6ca5f54c6a07bdf7bc.jpg', 
       description: 'Deep cleansing facial' 
     },
     { 
       id: '5', 
       name: 'Kids Haircut', 
       category: 'Hair', 
-      imageUrl: 'https://images.unsplash.com/photo-1517832606589-7a598bbd0af3?q=80&w=600&auto=format&fit=crop', 
+      imageUrl: 'https://i.pinimg.com/1200x/0d/07/10/0d071030352e925db1c764351312759d.jpg', 
       description: 'Gentle and stylish cuts for kids' 
     },
     { 
       id: '6', 
       name: 'Luxury Hot Towel Shave', 
       category: 'Grooming', 
-      imageUrl: 'https://images.unsplash.com/photo-1634480256802-7cb5b451f99a?q=80&w=600&auto=format&fit=crop', 
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYQlFiZxWoLWV9albeq_npRjZSOqrgKtENPIYMgui7Yg&s=10', 
       description: 'Classic straight razor shave with soothing hot towel oils' 
     },
     { 
       id: '7', 
       name: 'Buzz Cut & Lineup', 
       category: 'Hair', 
-      imageUrl: 'https://images.unsplash.com/photo-1593702295094-aec22597af65?q=80&w=600&auto=format&fit=crop', 
+      imageUrl: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?fm=jpg&q=80&w=600&auto=format&fit=crop', 
       description: 'Clean buzz cut with precision razor hairline definition' 
     },
     { 
       id: '8', 
       name: 'Charcoal Clay Mask', 
       category: 'Grooming', 
-      imageUrl: 'https://images.unsplash.com/photo-1561228987-8e7b77f9ca8f?q=80&w=600&auto=format&fit=crop', 
+      imageUrl: 'https://images.unsplash.com/photo-1619153709656-b2cf605b819b?fm=jpg&q=80&w=600&auto=format&fit=crop', 
       description: 'Deep pore detoxifying black charcoal facial mask' 
     },
     { 
       id: '9', 
       name: 'Scalp Massage & Therapy', 
       category: 'Grooming', 
-      imageUrl: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=600&auto=format&fit=crop', 
+      imageUrl: 'https://t4.ftcdn.net/jpg/01/09/27/77/360_F_109277740_u9NA3PkFeCcCVmBxKSvwHdAWt4Egzbbk.jpg', 
       description: 'Invigorating massage to stimulate hair follicles and relax' 
     },
     { 
       id: '10', 
       name: 'Premium Hair Treatment', 
       category: 'Hair', 
-      imageUrl: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop', 
+      imageUrl: 'https://images.unsplash.com/photo-1637777292536-27a13272dbea?fm=jpg&q=80&w=600&auto=format&fit=crop', 
       description: 'Deep conditioning treatment to restore moisture and shine' 
     },
     { 
       id: '11', 
       name: 'Nail Grooming & Manicure', 
       category: 'Grooming', 
-      imageUrl: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=600&auto=format&fit=crop', 
+      imageUrl: 'https://images.unsplash.com/photo-1595320378041-72f4c1490773?fm=jpg&q=80&w=600&auto=format&fit=crop', 
       description: 'Professional buffing, shaping, and cuticle care for hands' 
+    },
+    { 
+      id: '12', 
+      name: 'VIP House Call Grooming', 
+      category: 'Mobile', 
+      imageUrl: 'https://images.unsplash.com/photo-1567894340315-735d7c361db0?fm=jpg&q=80&w=600&auto=format&fit=crop', 
+      description: 'Our master barber travels directly to your residence, fully equipped with a mobile studio. Includes executive haircut, hot towel finish, and beard sculpting.' 
+    },
+    { 
+      id: '13', 
+      name: 'At-Home Executive Haircut', 
+      category: 'Mobile', 
+      imageUrl: 'https://images.unsplash.com/photo-1612214070495-ffc6b69cda4b?fm=jpg&q=80&w=600&auto=format&fit=crop', 
+      description: 'Premium executive haircut in the comfort and privacy of your own home or office. Includes shampoo, styling, and scalp massage.' 
+    },
+    { 
+      id: '14', 
+      name: 'Elite Beard & Shave (At-Home)', 
+      category: 'Mobile', 
+      imageUrl: 'https://images.unsplash.com/photo-1632072907857-d2cae8f52888?fm=jpg&q=80&w=600&auto=format&fit=crop', 
+      description: 'Luxury straight razor hot towel shave or beard shape-up with therapeutic oils, performed right at your location.' 
+    },
+    { 
+      id: '15', 
+      name: 'Event & Wedding Grooming VIP', 
+      category: 'Mobile', 
+      imageUrl: 'https://images.unsplash.com/photo-1600091166971-7f9faad6c1e2?fm=jpg&q=80&w=600&auto=format&fit=crop', 
+      description: 'Bespoke grooming packages for groomsmen or corporate events. We bring multiple master barbers to style your group on-site.' 
     }
   ]);
 
@@ -132,6 +160,7 @@ export class MockDataService {
   
   readonly hairServices = computed(() => this.servicesSignal().filter(s => s.category === 'Hair'));
   readonly groomingServices = computed(() => this.servicesSignal().filter(s => s.category === 'Grooming'));
+  readonly mobileServices = computed(() => this.servicesSignal().filter(s => s.category === 'Mobile'));
 
   // --- Team Data ---
   private teamSignal = signal<TeamMember[]>([
@@ -139,7 +168,7 @@ export class MockDataService {
       id: 'barber1',
       name: 'Obba',
       role: 'Master Barber',
-      experience: '23+ Years',
+      experience: '20+ Years',
       photoUrl: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1783504188/IMG_20260704_095032_056.jpg_ka67ec.jpg',
       instagram: 'https://instagram.com/glamoroushub',
       tiktok: 'https://tiktok.com/@glamoroushub'
@@ -157,7 +186,7 @@ export class MockDataService {
       id: 'specialist1',
       name: 'Mariam',
       role: 'Wash & Grooming Specialist',
-      experience: '6+ Years',
+      experience: '3+ Years',
       photoUrl: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1783504189/IMG_20260706_145312_705.jpg_g4psvn.jpg',
       instagram: 'https://instagram.com/glamoroushub',
       tiktok: 'https://tiktok.com/@glamoroushub'
@@ -167,7 +196,7 @@ export class MockDataService {
       name: 'Moha',
       role: 'Senior Stylist & Groomer',
       experience: '7+ Years',
-      photoUrl: 'https://images.unsplash.com/photo-1605497746444-ac9dbd340b66?q=80&w=600&auto=format&fit=crop',
+      photoUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop',
       instagram: 'https://instagram.com/glamoroushub',
       tiktok: 'https://tiktok.com/@glamoroushub'
     }
@@ -246,41 +275,35 @@ export class MockDataService {
   private gallerySignal = signal<GalleryItem[]>([
     {
       id: 'g1',
-      thumbnail: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=600&auto=format&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1200&auto=format&fit=crop',
+      thumbnail: 'https://www.instagram.com/p/DaQAVhItOhH/',
+      fullImage: 'https://www.instagram.com/p/DaQAVhItOhH/',
       alt: 'Gallery 1'
     },
     {
       id: 'g2',
-      thumbnail: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1200&auto=format&fit=crop',
+      thumbnail: 'https://www.instagram.com/p/DaNODl6NBq2/',
+      fullImage: 'https://www.instagram.com/p/DaNODl6NBq2/',
       alt: 'Gallery 2'
     },
     {
       id: 'g3',
-      thumbnail: 'https://images.unsplash.com/photo-1621607512214-68297480165e?q=80&w=600&auto=format&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1621607512214-68297480165e?q=80&w=1200&auto=format&fit=crop',
+      thumbnail: 'https://www.instagram.com/p/DZy_3H2jT9v/?img_index=1',
+      fullImage: 'https://www.instagram.com/p/DZy_3H2jT9v/?img_index=1',
       alt: 'Gallery 3',
       gridClasses: 'lg:col-span-2'
     },
     {
       id: 'g4',
-      thumbnail: 'https://images.unsplash.com/photo-1512496015851-a1cbf59c363d?q=80&w=600&auto=format&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1512496015851-a1cbf59c363d?q=80&w=1200&auto=format&fit=crop',
+      thumbnail: 'https://www.instagram.com/p/DZ4QiBet8rg/',
+      fullImage: 'https://www.instagram.com/p/DZ4QiBet8rg/',
       alt: 'Gallery 4',
       gridClasses: 'lg:row-span-2 lg:h-full'
     },
     {
       id: 'g5',
-      thumbnail: 'https://images.unsplash.com/photo-1520627581292-1279262cf1b5?q=80&w=600&auto=format&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1520627581292-1279262cf1b5?q=80&w=1200&auto=format&fit=crop',
+      thumbnail: 'https://www.instagram.com/p/DaKJLQwDUbx/?img_index=1',
+      fullImage: 'https://www.instagram.com/p/DaKJLQwDUbx/?img_index=1',
       alt: 'Gallery 5'
-    },
-    {
-      id: 'g6',
-      thumbnail: 'https://images.unsplash.com/photo-1593702288056-cc1ec5712e1f?q=80&w=600&auto=format&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1593702288056-cc1ec5712e1f?q=80&w=1200&auto=format&fit=crop',
-      alt: 'Gallery 6'
     }
   ]);
 

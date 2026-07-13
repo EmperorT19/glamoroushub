@@ -25,16 +25,7 @@ import { RouterLink } from '@angular/router';
           </a>
           <p class="text-gray-400 text-sm mb-4">{{ member.experience }} Experience</p>
           
-          <div class="flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-            <div class="flex space-x-3 pointer-events-auto">
-              <a [href]="member.instagram" target="_blank" class="text-gray-400 hover:text-gold transition-colors">
-                <span class="text-xs uppercase tracking-widest border-b border-transparent hover:border-gold pb-1">IG</span>
-              </a>
-              <a [href]="member.tiktok" target="_blank" class="text-gray-400 hover:text-gold transition-colors">
-                <span class="text-xs uppercase tracking-widest border-b border-transparent hover:border-gold pb-1">TK</span>
-              </a>
-            </div>
-            
+          <div class="flex items-center justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
             <a routerLink="/booking" [queryParams]="{staff: member.id}" 
                class="text-black bg-gold px-4 py-2 text-xs font-bold uppercase tracking-wider hover:bg-white transition-colors pointer-events-auto">
               Book

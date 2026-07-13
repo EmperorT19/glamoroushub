@@ -65,6 +65,36 @@ import { StaggerTextDirective } from '../../directives/stagger-text.directive';
       </div>
     </section>
 
+    <!-- Mobile Barbershop House Call Promo Section -->
+    <section class="py-24 relative bg-black overflow-hidden border-t border-gray-900">
+      <!-- Background overlay with high quality abstract image/pattern -->
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1593702295094-aec22597af65?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black"></div>
+      
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div appScrollReveal class="space-y-6">
+          <p class="text-gold uppercase tracking-widest font-bold text-sm">Glamorous Hub House Calls</p>
+          <h2 class="text-4xl md:text-5xl font-bold text-white uppercase tracking-tight leading-tight">
+            The Luxury Barbershop,<br>
+            <span class="text-gold">At Your Doorstep.</span>
+          </h2>
+          <div class="w-20 h-1 bg-gold mx-auto my-6"></div>
+          <p class="text-gray-300 text-lg md:text-xl leading-relaxed font-light max-w-3xl mx-auto">
+            Can't make it to our studio? Experience our gold standard of grooming from the comfort and privacy of your home, office, or luxury hotel suite. Our master barbers travel fully equipped with professional mobile stations, sanitization kits, and premium products to deliver the ultimate private grooming session.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+            <a routerLink="/booking" [queryParams]="{service: '12'}" class="bg-gold text-black px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] border border-gold hover:border-white w-full sm:w-auto text-center">
+              Book a House Call
+            </a>
+            <a routerLink="/services" class="border border-gray-700 text-gray-300 hover:text-gold hover:border-gold px-8 py-4 text-sm font-bold uppercase tracking-widest transition-colors duration-300 w-full sm:w-auto text-center">
+              View Mobile Menu
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Team Strip Section -->
     <section class="py-24 bg-black-light border-y border-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MockDataService } from '../../services/mock-data.service';
 import { SeoService } from '../../services/seo.service';
 import { ReelCardComponent } from '../../components/reel-card/reel-card.component';
@@ -37,13 +38,32 @@ import { ReelCardComponent } from '../../components/reel-card/reel-card.componen
           </h2>
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <!-- Mock gallery images -->
-            <a *ngFor="let item of mockData.gallery()" 
-               [href]="item.fullImage" 
-               target="_blank" 
-               class="aspect-square bg-gray-900 border border-gray-800 hover:border-gold transition-colors duration-300 relative group overflow-hidden block"
-               [ngClass]="item.gridClasses || ''">
-              <img [src]="item.thumbnail" [alt]="item.alt" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
-            </a>
+            <div *ngFor="let item of mockData.gallery()" 
+                 class="aspect-square bg-gray-900 border border-gray-800 hover:border-gold transition-colors duration-300 relative group overflow-hidden block"
+                 [ngClass]="item.gridClasses || ''">
+              
+              <!-- Instagram post/reel page url -->
+              <ng-container *ngIf="isInstagram(item.thumbnail); else standardImage">
+                <iframe 
+                  [src]="getSafeEmbed(item.thumbnail)" 
+                  class="absolute inset-0 w-full h-full border-0 z-10"
+                  scrolling="no" 
+                  allowtransparency="true" 
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+              </ng-container>
+
+              <!-- Standard Image / Direct Image URL -->
+              <ng-template #standardImage>
+                <a [href]="item.fullImage" target="_blank" class="w-full h-full block">
+                  <img [src]="item.thumbnail" 
+                       [alt]="item.alt" 
+                       referrerpolicy="no-referrer"
+                       class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
+                </a>
+              </ng-template>
+              
+            </div>
           </div>
         </div>
         
@@ -55,7 +75,8 @@ import { ReelCardComponent } from '../../components/reel-card/reel-card.componen
 export class GalleryComponent implements OnInit {
   constructor(
     public mockData: MockDataService,
-    private seo: SeoService
+    private seo: SeoService,
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit() {
@@ -63,5 +84,25 @@ export class GalleryComponent implements OnInit {
       title: 'Gallery & Reels',
       description: 'View the premium cuts, styles, and luxury atmosphere at Glamorous Hub.'
     });
+  }
+
+  isInstagram(url: string): boolean {
+    if (!url) return false;
+    return /instagram\.com\/(p|reel)\//.test(url);
+  }
+
+  getSafeEmbed(url: string): SafeResourceUrl {
+    const pMatch = url.match(/\/p\/([A-Za-z0-9_-]+)/);
+    const reelMatch = url.match(/\/reel\/([A-Za-z0-9_-]+)/);
+    let embedUrl = '';
+    if (pMatch && pMatch[1]) {
+      embedUrl = `https://www.instagram.com/p/${pMatch[1]}/embed/`;
+    } else if (reelMatch && reelMatch[1]) {
+      embedUrl = `https://www.instagram.com/reel/${reelMatch[1]}/embed/`;
+    } else {
+      const cleanUrl = url.replace(/\/+$/, '');
+      embedUrl = `${cleanUrl}/embed/`;
+    }
+    return this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
   }
 }

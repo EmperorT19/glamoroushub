@@ -53,6 +53,18 @@ import { SeoService } from '../../services/seo.service';
               </select>
             </div>
 
+            <!-- Address/Location (Only shown for Mobile services) -->
+            <div *ngIf="isMobileServiceSelected()" class="animate-fade-in space-y-2">
+              <label for="address" class="block text-gold text-sm font-bold uppercase tracking-wider mb-2 flex items-center">
+                <span class="mr-2">📍</span> Home Address / Service Location
+              </label>
+              <textarea id="address" name="address" required ngModel #addressCtrl="ngModel" rows="3"
+                        placeholder="Enter the full address where the barber should travel (Street, Apt/Suite #, City, Gate Code, etc.)"
+                        class="w-full bg-black border border-gold/50 text-white px-4 py-3 focus:outline-none focus:border-gold transition-colors resize-none placeholder:text-gray-600"
+                        [class.border-red-500]="addressCtrl.invalid && (addressCtrl.dirty || addressCtrl.touched)"></textarea>
+              <p class="text-xs text-gray-500 italic">Our master barber will travel to this location. Please ensure someone is available at the scheduled time.</p>
+            </div>
+
             <!-- Staff Selection -->
             <div>
               <label for="staff" class="block text-gray-400 text-sm font-bold uppercase tracking-wider mb-2">Preferred Specialist</label>
@@ -113,6 +125,11 @@ export class BookingComponent implements OnInit {
   selectedService: string = '';
   selectedStaff: string = 'any';
   submitted = false;
+
+  isMobileServiceSelected(): boolean {
+    const service = this.mockData.services().find(s => s.id === this.selectedService);
+    return service?.category === 'Mobile';
+  }
 
   constructor(
     public mockData: MockDataService,
