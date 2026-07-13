@@ -59,15 +59,7 @@ import { ReelCardComponent } from '../../components/reel-card/reel-card.componen
                   <img [src]="item.thumbnail" 
                        [alt]="item.alt" 
                        referrerpolicy="no-referrer"
-                       class="w-full h-full object-cover filter md:grayscale group-hover:grayscale-0 transition-all duration-700">
-                  <!-- Instagram Link Indicator Overlay -->
-                  <div class="absolute top-3 right-3 z-20 bg-black/70 p-1.5 border border-gold/30 opacity-80 group-hover:opacity-100 group-hover:bg-black/90 group-hover:border-gold transition-all duration-300">
-                    <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                  </div>
+                       class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
                 </a>
               </ng-template>
               
