@@ -10,12 +10,22 @@ import { Reel } from '../../services/mock-data.service';
   template: `
     <div class="relative group aspect-[9/16] bg-black border border-gray-900 overflow-hidden w-full h-full flex flex-col justify-between">
       <!-- Instagram Embed Iframe -->
-      <div class="w-full h-full relative overflow-hidden bg-black flex-grow">
+      <div class="w-full h-full relative overflow-hidden bg-black flex-grow flex items-center justify-center">
+        <!-- Premium Loader Spinner -->
+        <div *ngIf="isLoading" class="absolute inset-0 flex flex-col items-center justify-center bg-black/90 z-20">
+          <div class="w-10 h-10 border-2 border-gold/20 border-t-gold rounded-full animate-spin"></div>
+          <span class="text-[10px] text-gold/60 uppercase tracking-widest mt-3 font-semibold">Loading Reel</span>
+        </div>
+
         <iframe 
           *ngIf="safeUrl"
           [src]="safeUrl" 
-          class="absolute inset-0 w-full h-full border-0"
+          (load)="onIframeLoad()"
+          class="absolute inset-0 w-full h-full border-0 transition-opacity duration-700"
+          [class.opacity-0]="isLoading"
+          [class.opacity-100]="!isLoading"
           scrolling="no" 
+          loading="lazy"
           allowtransparency="true" 
           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
         </iframe>
@@ -44,6 +54,7 @@ export class ReelCardComponent implements OnInit {
   @Input({ required: true }) reel!: Reel;
   
   safeUrl!: SafeResourceUrl;
+  isLoading = true;
 
   constructor(private sanitizer: DomSanitizer) {}
 
@@ -65,5 +76,9 @@ export class ReelCardComponent implements OnInit {
       
       this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
     }
+  }
+
+  onIframeLoad() {
+    this.isLoading = false;
   }
 }

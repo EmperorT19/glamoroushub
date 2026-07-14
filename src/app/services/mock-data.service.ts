@@ -150,7 +150,28 @@ export class MockDataService {
       category: 'Mobile', 
       imageUrl: 'https://images.unsplash.com/photo-1600091166971-7f9faad6c1e2?fm=jpg&q=80&w=600&auto=format&fit=crop', 
       description: 'Bespoke grooming packages for groomsmen or corporate events. We bring multiple master barbers to style your group on-site.' 
-    }
+    },
+    { 
+  id: '16', 
+  name: 'Groomsmen Squad Package', 
+  category: 'Mobile', 
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlKYsmxbsFi7qK9PfHu0uO_gNqRXTeZIUL8N21xuCvjhzUPx2v7ODH06RS&s=10', 
+  description: 'Barber sets up on-site for the whole crew synced fades and beard lines before the ceremony, no one waits in a shop chair.' 
+},
+{ 
+  id: '17', 
+  name: 'Boardroom Standby Barber', 
+  category: 'Mobile', 
+  imageUrl: 'https://i.pinimg.com/736x/20/c9/28/20c9287356ed42c8c76ec0188c8303b9.jpg', 
+  description: 'On-call grooming between meetings 20-minute lineup and beard tidy at your office, back to your desk before your next call.' 
+},
+{ 
+  id: '18', 
+  name: 'Afro & Textured Hair Specialist', 
+  category: 'Hair', 
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS91EXxUMVYCXEg7edtJP5GPj-V0nq7afr9R6xMteunLuMRGJY14zMkQCvl&s=10', 
+  description: 'Cut and shape designed for coily and kinky textures proper technique for afros, taper fades, and natural hair growth patterns.' 
+}
   ]);
 
   readonly services = this.servicesSignal.asReadonly();
@@ -166,7 +187,7 @@ export class MockDataService {
       name: 'Obba',
       role: 'Master Barber',
       experience: '20+ Years',
-      photoUrl: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1783504188/IMG_20260704_095032_056.jpg_ka67ec.jpg',
+      photoUrl: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1784057432/WhatsApp_Image_2026-07-14_at_22.25.12_yoxbrq.jpg',
       instagram: 'https://instagram.com/glamoroushub',
       tiktok: 'https://tiktok.com/@glamoroushub'
     },
@@ -193,7 +214,7 @@ export class MockDataService {
       name: 'Moha',
       role: 'Senior Stylist & Groomer',
       experience: '7+ Years',
-      photoUrl: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1783945413/Moha.jpg_zoohcw.jpg',
+      photoUrl: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1784057432/WhatsApp_Image_2026-07-14_at_22.26.20_elcqqm.jpg',
       instagram: 'https://instagram.com/glamoroushub',
       tiktok: 'https://tiktok.com/@glamoroushub'
     }

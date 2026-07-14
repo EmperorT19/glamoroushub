@@ -51,7 +51,7 @@ import { CommonModule } from '@angular/common';
       </div>
 
       <!-- WhatsApp Button (Green circular bubble with pulse) -->
-      <a href="https://wa.me/254700000000" target="_blank" 
+      <a href="https://wa.me/+254742641574" target="_blank" 
          class="relative w-12 h-12 md:w-14 md:h-14 bg-[#25D366] flex items-center justify-center text-white hover:bg-white hover:text-[#25D366] hover:-translate-y-1 transition-all duration-300 group shadow-[0_0_20px_rgba(37,211,102,0.4)] animate-fade-in"
          style="border-radius: 50%;">
         

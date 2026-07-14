@@ -44,10 +44,20 @@ import { ReelCardComponent } from '../../components/reel-card/reel-card.componen
               
               <!-- Instagram post/reel page url -->
               <ng-container *ngIf="isInstagram(item.thumbnail); else standardImage">
+                <!-- Premium Loader Spinner -->
+                <div *ngIf="!loadedIframes[item.id]" class="absolute inset-0 flex flex-col items-center justify-center bg-black/90 z-20">
+                  <div class="w-8 h-8 border-2 border-gold/20 border-t-gold rounded-full animate-spin"></div>
+                  <span class="text-[9px] text-gold/60 uppercase tracking-widest mt-2 font-semibold">Loading Post</span>
+                </div>
+
                 <iframe 
                   [src]="getSafeEmbed(item.thumbnail)" 
-                  class="absolute inset-0 w-full h-full border-0 z-10"
+                  (load)="onIframeLoad(item.id)"
+                  class="absolute inset-0 w-full h-full border-0 z-10 transition-opacity duration-700"
+                  [class.opacity-0]="!loadedIframes[item.id]"
+                  [class.opacity-100]="loadedIframes[item.id]"
                   scrolling="no" 
+                  loading="lazy"
                   allowtransparency="true" 
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                 </iframe>
@@ -73,6 +83,8 @@ import { ReelCardComponent } from '../../components/reel-card/reel-card.componen
   styles: []
 })
 export class GalleryComponent implements OnInit {
+  loadedIframes: { [key: string]: boolean } = {};
+
   constructor(
     public mockData: MockDataService,
     private seo: SeoService,
@@ -104,5 +116,9 @@ export class GalleryComponent implements OnInit {
       embedUrl = `${cleanUrl}/embed/`;
     }
     return this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
+  }
+
+  onIframeLoad(id: string) {
+    this.loadedIframes[id] = true;
   }
 }

@@ -42,7 +42,7 @@ import { LogoComponent } from '../logo/logo.component';
               </li>
               <li class="flex items-center">
                 <span class="text-gold mr-2">📞</span>
-                <span>+254 700 000 000</span>
+                <span>+254 742 641 574</span>
               </li>
               <li class="flex items-center">
                 <span class="text-gold mr-2">✉️</span>
