@@ -8,7 +8,7 @@ import { LogoComponent } from '../logo/logo.component';
   standalone: true,
   imports: [CommonModule, RouterLink, RouterLinkActive, LogoComponent],
   template: `
-    <nav class="fixed w-full z-50 bg-black/95 backdrop-blur-sm border-b border-gold/20">
+    <nav class="fixed w-full z-50 bg-[#0A0A0A] bg-opacity-95 backdrop-blur-sm border-b border-gold/20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <div class="flex-shrink-0">
@@ -46,7 +46,7 @@ import { LogoComponent } from '../logo/logo.component';
       </div>
 
       <!-- Mobile Menu -->
-      <div *ngIf="isMenuOpen()" class="md:hidden bg-black/98 border-b border-gold/20 fixed top-20 left-0 w-full h-[calc(100vh-5rem)] overflow-y-auto z-40 animate-fade-in">
+      <div *ngIf="isMenuOpen()" class="md:hidden bg-[#0A0A0A] border-b border-gold/20 fixed top-20 left-0 w-full h-[calc(100vh-5rem)] overflow-y-auto z-40 animate-fade-in">
         <div class="px-2 pt-2 pb-8 space-y-1 sm:px-3">
           @for (link of navLinks; track link.path) {
             <a [routerLink]="link.path" 

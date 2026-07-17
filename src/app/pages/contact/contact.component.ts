@@ -38,7 +38,7 @@ import { SeoService } from '../../services/seo.service';
                 </li>
                 <li class="flex items-center">
                   <span class="text-gold mr-4">✉️</span>
-                  <span>hello&#64;glamoroushub.com</span>
+                  <a href="mailto:contact&#64;glamoroushub.co.ke" class="hover:text-gold transition-colors">contact&#64;glamoroushub.co.ke</a>
                 </li>
               </ul>
             </div>

@@ -12,7 +12,7 @@ import { Reel } from '../../services/mock-data.service';
       <!-- Instagram Embed Iframe -->
       <div class="w-full h-full relative overflow-hidden bg-black flex-grow flex items-center justify-center">
         <!-- Premium Loader Spinner -->
-        <div *ngIf="isLoading" class="absolute inset-0 flex flex-col items-center justify-center bg-black/90 z-20">
+        <div *ngIf="isLoading" class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-90 z-20">
           <div class="w-10 h-10 border-2 border-gold/20 border-t-gold rounded-full animate-spin"></div>
           <span class="text-[10px] text-gold/60 uppercase tracking-widest mt-3 font-semibold">Loading Reel</span>
         </div>

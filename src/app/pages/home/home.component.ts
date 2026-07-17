@@ -69,7 +69,7 @@ import { StaggerTextDirective } from '../../directives/stagger-text.directive';
     <section class="py-24 relative bg-black overflow-hidden border-t border-gray-900">
       <!-- Background overlay with high quality abstract image/pattern -->
       <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1593702295094-aec22597af65?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black via-[#0A0A0A]/85 to-black"></div>
       
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div appScrollReveal class="space-y-6">

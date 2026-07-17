@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
          class="relative block overflow-hidden aspect-[16/10] mb-6 border border-gray-800/60 group-hover:border-gold/30 transition-colors duration-500 z-10">
         <img [src]="service.imageUrl" [alt]="service.name" 
              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
       </a>
       
       <!-- Category Badge -->

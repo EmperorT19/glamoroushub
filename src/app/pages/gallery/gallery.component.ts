@@ -45,7 +45,7 @@ import { ReelCardComponent } from '../../components/reel-card/reel-card.componen
               <!-- Instagram post/reel page url -->
               <ng-container *ngIf="isInstagram(item.thumbnail); else standardImage">
                 <!-- Premium Loader Spinner -->
-                <div *ngIf="!loadedIframes[item.id]" class="absolute inset-0 flex flex-col items-center justify-center bg-black/90 z-20">
+                <div *ngIf="!loadedIframes[item.id]" class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-90 z-20">
                   <div class="w-8 h-8 border-2 border-gold/20 border-t-gold rounded-full animate-spin"></div>
                   <span class="text-[9px] text-gold/60 uppercase tracking-widest mt-2 font-semibold">Loading Post</span>
                 </div>

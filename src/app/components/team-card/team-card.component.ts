@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
           <img [src]="member.photoUrl" [alt]="member.name" 
                class="w-full h-full object-cover filter md:grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105">
           <!-- Overlay gradient -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-85 group-hover:opacity-90 transition-opacity duration-300"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-[#0A0A0A]/50 to-transparent opacity-85 group-hover:opacity-90 transition-opacity duration-300"></div>
         </a>
         
         <!-- Content -->

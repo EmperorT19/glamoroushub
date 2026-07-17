@@ -46,7 +46,7 @@ import { LogoComponent } from '../logo/logo.component';
               </li>
               <li class="flex items-center">
                 <span class="text-gold mr-2">✉️</span>
-                <span>bookings&#64;glamoroushub.com</span>
+                <a href="mailto:contact&#64;glamoroushub.co.ke" class="hover:text-gold transition-colors">contact&#64;glamoroushub.co.ke</a>
               </li>
             </ul>
           </div>
@@ -79,9 +79,10 @@ import { LogoComponent } from '../logo/logo.component';
         </div>
         
         <div class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p class="text-gray-600 text-xs uppercase tracking-widest mb-4 md:mb-0">
-            &copy; {{ currentYear }} Glamorous Hub. All rights reserved.
-          </p>
+          <div class="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0 text-gray-600 text-xs uppercase tracking-widest mb-4 md:mb-0">
+            <span>&copy; {{ currentYear }} Glamorous Hub. All rights reserved.</span>
+            <span>Created by Bravion Technologies</span>
+          </div>
           <div class="flex space-x-6 text-xs text-gray-600 uppercase tracking-widest">
             <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
             <a href="#" class="hover:text-gold transition-colors">Terms of Service</a>
